@@ -1,0 +1,425 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>图片列表页（瀑布流） </title>
+		<link rel="stylesheet" type="text/css" href="css/06.css">
+		<script src="js/jquery-1.11.3.min.js"></script>
+	</head>
+
+	<body>
+		<div id="mini_nav">
+			<ul>
+				<li>
+					<a href="javascript:void(0);" target="_blank">某某网首页</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" target="_blank">手机某某网</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" target="_blank">邮箱</a>
+				</li>
+				<li class="end">
+					<a href="javascript:void(0);" target="_blank">网站导航</a>
+				</li>
+			</ul>
+		</div>
+		<div id="main_nav">
+			<div class="main p1">
+				<ul>
+					<li><strong><a href="javascript:void(0);">新闻</a></strong></li>
+					<li>
+						<a href="javascript:void(0);">视频</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">图片</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">评论</a>
+					</li>
+				</ul>
+				<ul>
+					<li><strong><a href="javascript:void(0);">财经</a></strong></li>
+					<li>
+						<a href="javascript:void(0);">股票</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">港股</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">基金</a>
+					</li>
+				</ul>
+			</div>
+			<div class="main p2">
+				<ul>
+					<li><strong><a href="javascript:void(0);">娱乐</a></strong></li>
+					<li>
+						<a href="javascript:void(0);">明星</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">电影</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">音乐</a>
+					</li>
+				</ul>
+				<ul>
+					<li><strong><a href="javascript:void(0);">体育</a></strong></li>
+					<li class="en">
+						<a href="javascript:void(0);">NBA</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" target="_top">彩票</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">中超</a>
+					</li>
+				</ul>
+			</div>
+			<div class="main">
+				<ul>
+					<li><strong><a href="javascript:void(0);">汽车</a></strong></li>
+					<li>
+						<a href=javascript:void(0);">房产</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">家居</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">家电</a>
+					</li>
+				</ul>
+				<ul>
+					<li><strong><a href="javascript:void(0);">科技</a></strong></li>
+					<li>
+						<a href="javascript:void(0);">数码</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">手机</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">下载</a>
+					</li>
+				</ul>
+			</div>
+			<div class="main">
+				<ul>
+					<li><strong><a href="javascript:void(0);">女性</a></strong></li>
+					<li>
+						<a href="javascript:void(0);">结婚</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">美容</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">育儿</a>
+					</li>
+				</ul>
+				<ul>
+					<li><strong><a href="javascript:void(0);">时尚</a></strong></li>
+					<li>
+						<a href="javascript:void(0);">购物</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">杂志</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">旅游</a>
+					</li>
+				</ul>
+			</div>
+			<div class="main">
+				<ul>
+					<li><strong><a href="javascript:void(0);">读书</a></strong></li>
+					<li>
+						<a href="javascript:void(0);">教育</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">高考</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">出国</a>
+					</li>
+				</ul>
+				<ul>
+					<li><strong><a href="javascript:void(0);">游戏</a></strong></li>
+					<li>
+						<a href="javascript:void(0);">动漫</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">动画</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">星座</a>
+					</li>
+				</ul>
+			</div>
+			<div class="main p6">
+				<ul>
+					<li><strong><a href="javascript:void(0);">博客</a></strong></li>
+					<li class="mblog">
+						<a href="javascript:void(0);">微博</a>
+					</li>
+				</ul>
+				<ul>
+					<li><strong><a href="javascript:void(0);">军事</a></strong></li>
+					<li>
+						<a href="javascript:void(0);">论坛</a>
+					</li>
+				</ul>
+			</div>
+			<div class="main p7 end">
+				<ul>
+					<li><strong><a href="javascript:void(0);">世博</a></strong></li>
+					<li class="end">
+						<a href="javascript:void(0);">公益</a>
+					</li>
+				</ul>
+				<ul>
+					<li><strong><a href="javascript:void(0);">儿童</a></strong></li>
+					<li class="end">
+						<a href="javascript:void(0);">天气</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="titlist clear">
+				<h3>图片滚动列表</h3>
+				<div class="searchInput">
+					<a href="javascript:void(0)" target="_blank" class="SosoLogo"></a>
+					<div class="inputWarp"><input class="txtArea" name="w" type="text" value="请输入关键词" onClick="value=''" /></div>
+					<input type="submit" class="submit" value="新闻搜索" />
+				</div>
+			</div>
+			<div class="main">
+				<div class="mod curPosition2 clear">
+					<div class="position">您的位置:
+						<a href="http://null/"></a> &gt;
+						<a href="http://null/photo.shtml">图片站</a>&gt; 组图连放
+					</div>
+					<div class="refresh">
+						<form name="_AutoPlayForm_">
+							<input type="radio" name="_AutoPlayRadio_" id="_AutoPlayOn_" value="on" /><label for="_AutoPlayOn_">自动(每分钟刷新一次)</label>&#160;<input type="radio" name="_AutoPlayRadio_" id="_AutoPlayOff_" value="off" /><label for="_AutoPlayOff_">手动</label>&#160;&#160;
+							<a href="javascript:;" onclick="window.location.reload();">刷新</a>
+						</form>
+					</div>
+				</div>
+				<div class="mod curPosition clear">
+					<div class="pageNav">
+						<span class="na">&lt;上一页</span><strong>1</strong>
+						<a href="javascript:void(0);">2</a>
+						<a href="javascript:void(0);">3</a>
+						<a href="javascript:void(0);">4</a>
+						<a href="javascript:void(0);">5</a><span class="mor">...</span>
+						<a href="javascript:void(0);">334</a>
+						<a class="f12" href="javascript:void(0);">下一页&gt;</a>
+					</div>
+				</div>
+				<div class="falloutList">
+					<div class="picIn cf">
+						<div class="picList mr-l">
+							<ul id="piclist" class="cf" style="position: relative;">
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/17599908_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">郑州一轿车疑被主人遗弃 车身爬满藤蔓</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;16:03</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/17599223_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">男子庆千金满月 数十架无人机编队升空祝贺</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;14:53</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/17598861_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">烟台遭遇罕见大浪 岸边车辆被水淹</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;14:41</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/17598720_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">浙江一小学为防拥堵 校门口摆放50个石墩</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;14:36</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/138590814_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">西安商家售卖新鲜空气呼吁环保 一袋空气一元钱</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;14:25</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/138589441_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">七旬老人虚构“秘密军事基地”工程 骗得30万元</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;13:56</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/138588084_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">小伙花71元整形失败 只能靠扮丑生活</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;12:24</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/17597209_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">都是毒品造的孽 吸毒男将幼女扔进水库淹死</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;11:59</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/17596288_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">济南郊区疯狂采石 翠绿大山变“天坑”</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;11:16</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/17595297_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">山东潍坊一小区现山寨版十二生肖兽首铜像</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;10:30</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/17595462_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">撤与留中挣扎的山村学堂 校舍简陋上学路艰辛</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;10:26</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/138581673_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">密集恐惧症慎入！外媒记录中国震撼人海照</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;10:26</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/17594587_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">沈阳街头 市民游客上演花式“跨栏”</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;10:03</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/17594166_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">小桥流水人家 这样的江南水乡你见过么？</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;09:55</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/17593446_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">孟加拉孩子的童年 垃圾堆里捡东西教堂边祈祷</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;09:40</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/17592579_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">印度当局为打击盗猎强拆3村庄 大象充当推土机</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;09:11</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/17592225_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">沈阳秋季房交会 美女剪破丝袜表演夺眼球</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;09:06</div>
+								</li>
+								<li>
+									<div class="picText">
+										<a target="_blank" href="javascript:void(0);"><img src="images/06/17592396_small4.jpg" alt=""></a>
+										<p>
+											<a target="_blank" href="javascript:void(0);">北京香山成涂鸦重灾区 遗址外墙被游客刻满文字</a>
+										</p>
+									</div>
+									<div class="upTime">09月20日&#160;09:06</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<script src="js/06myselfFallout.js"></script>
+				<!--<script src="js/06tecentFallout.js"></script>-->
+				<script type = "text/javascript" >
+					function currlist() {
+						var allPic = document.getElementById('piclist');
+						var picOne = allPic.getElementsByTagName('li');
+						var i = 0;
+						for(i = 0; i < picOne.length; i++) {
+							picOne[i].onmouseover = function() {
+								this.className = "curr";
+							}
+							picOne[i].onmouseout = function() {
+								this.className = "";
+							}
+						}
+					}
+					currlist();
+				</script>
+				<div class="clr"></div>
+				<div class="mod curPosition clear">
+					<div class="pageNav">
+						<span class="na">&lt;上一页</span><strong>1</strong>
+						<a href="javascript:void(0);">2</a>
+						<a href="javascript:void(0);">3</a>
+						<a href="javascript:void(0);">4</a>
+						<a href="javascript:void(0);">5</a><span class="mor">...</span>
+						<a href="javascript:void(0);">334</a>
+						<a class="f12" href="javascript:void(0);">下一页&gt;</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

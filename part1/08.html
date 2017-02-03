@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播(水平回滚+导航条)</title>
+		<script src="js/jquery-1.11.3.min.js"></script>
+	</head>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		li{list-style: none;}
+		#btn li{width:20px;height: 20px;border-radius: 20px;color: #FFFFFF;background-color: #F90;text-align: center;float:left;cursor:pointer;margin-right:5px;}
+		#btn{position:absolute;right:0;bottom:5px;}
+		#showArea{width: 520px;height:280px;margin:40px auto 0;border:5px solid #F1F1F1;border-radius:5px;position: relative;overflow: hidden;}
+		#imgArea{width:2600px;height:280px;position:absolute;}
+		#imgArea li{float:left;}
+		#btn li.current{background-color: #f60;}
+		#showArea .btnSlide{width: 40px;height: 60px;background: rgba(0,0,0,0.5);position: absolute;top: 50%;margin-top: -30px;cursor: pointer;text-align: center;font-size: 50px;line-height: 60px;color: white;display: none;}
+		#showArea:hover .btnSlide{display: block;}
+		#showArea .btnSlideL{left:0;}
+		#showArea .btnSlideR{right:0;}
+	</style>
+	<script>
+		$(document).ready(
+			function(){
+				var flag="moveL",
+					i=0,
+					width=$("#imgArea li:first").width();
+				function showImage(){
+					if(i==-4){
+						flag="moveR";
+					}else if(i==0){
+						flag="moveL";
+					}
+					if (flag=="moveL") {
+						$("#imgArea").animate({left:i*width},"slow");
+						$("#btn li").removeClass("current").eq(-i).addClass("current");
+						i--;
+					} else if(flag=="moveR"){
+						$("#imgArea").animate({left:i*width},"slow");
+						$("#btn li").removeClass("current").eq(-i).addClass("current");
+						i++;
+					}
+				}
+				showImage();
+				var timer=setInterval(showImage,1500);
+				$("#imgArea").hover(
+					function(){
+						clearInterval(timer);
+					},
+					function(){
+						timer=setInterval(showImage,1500);
+				});
+				$("#btn li").hover(function () {
+					clearInterval(timer);
+					i=-$(this).index();
+					$("#imgArea").animate({left:i*width}, "fast");
+					$(this).addClass("current").siblings().removeClass("current");
+				},
+				function(){
+						timer=setInterval(showImage,1500);
+				});
+				$(".btnSlide").hover(
+					function(){
+						clearInterval(timer);
+					},
+					function(){
+						timer=setInterval(showImage,1500);
+				}).click(function(){
+					switch (i){
+						case 0: $(this).attr("class")=="btnSlide btnSlideL" ? i=-4 : i--;
+							break;
+						case -4: $(this).attr("class")=="btnSlide btnSlideL" ? i++ : i=0;
+							break;
+						default: $(this).attr("class")=="btnSlide btnSlideL" ? i++ : i--;
+							break;
+					}
+					$("#imgArea").animate({left:i*width}, "fast");
+					$("#btn li").removeClass("current").eq(-i).addClass("current");
+				});
+			}
+		);
+	</script>
+	<body>
+		<div id="showArea">
+			<ul id="imgArea">
+				<li><img src="images/1.jpg"/></li>
+				<li><img src="images/2.jpg"/></li>
+				<li><img src="images/3.jpg"/></li>
+				<li><img src="images/4.jpg"/></li>
+				<li><img src="images/5.jpg"/></li>
+			</ul>
+			<ul id="btn">
+				<li class="current">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+			<div class="btnSlide btnSlideL">&lt;</div>
+    		<div class="btnSlide btnSlideR">&gt;</div>
+		</div>
+	</body>
+
+</html>

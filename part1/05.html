@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播(垂直滚动)</title>
+		<script src="js/jquery-1.11.3.min.js"></script>
+	</head>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		li{list-style: none;}
+		#btn li{width:20px;height: 20px;border-radius: 20px;color: #FFFFFF;background-color: #F90;text-align: center;float:top;cursor:pointer;margin-right:5px;}
+		#btn{position:absolute;right:0;bottom:5px;}
+		#showArea{width: 520px;height:280px;margin:40px auto 0;border:5px solid #F1F1F1;border-radius:5px;position: relative;overflow: hidden;}
+		#imgArea{width:520px;height:1400px;}
+		#btn li{float:left;}
+		#btn li.current{background-color: #f60;}
+	</style>
+	<script>
+		$(document).ready(
+			function(){
+				var $imgArea=$("#imgArea"),
+					height=$("#imgArea li:first").height();
+				var timer,i=0;
+				$("#imgArea li").mouseover(
+					function(){
+						clearInterval(timer);
+					}
+				).mouseout(
+					function(){
+						play();
+					}
+				);
+				$("#btn li").mouseover(
+					function(){
+						clearInterval(timer);
+					}
+				).mouseout(
+					function(){
+						play();
+					}
+				).click(
+					function(){
+						var index=this.innerHTML-1;
+						$("#btn li").removeClass("current").eq(index).addClass("current");
+						if(i-index>0){
+							$imgArea.css({"margin-top":height*(index-i)+"px"});
+							for (var j=0;j<i-index;j++) {
+								$imgArea.children("li").first().before(
+									$imgArea.children("li").last()
+								);
+							}
+							$imgArea.animate({
+								"margin-top":0
+							},
+							"slow");
+							i=index;
+						}else{
+							$imgArea.animate({
+								"margin-top":height*(i-index)+"px"
+							},
+							"slow",
+							function(){
+								for (var j=0;j<index-i;j++) {
+									$imgArea.children("li").last().after(
+										$imgArea.children("li").first()
+									);
+								}
+								$imgArea.css({"margin-top":0});
+								i=index;
+							});
+						}
+					}
+				);
+				function play(){
+					timer=setInterval(function(){
+						$imgArea.animate({
+							"margin-top":"-"+ height +"px"
+						},
+						"slow",
+						function(){
+							//此处保证能循环轮播  
+	                    	//将已经轮播过的节点的第一张图片添加到末尾的位置  
+	                    	//再将margin-top重置为0px;  
+	                    	//这样就能一直的循环下去. 
+							$imgArea.css({"margin-top":0}).
+							children("li").last().after(
+								$imgArea.children("li").first()
+							);
+							i==4 ? i=0 : i++;
+							$("#btn li").removeClass("current").
+										eq(i).addClass("current");
+						});
+					},2000);
+				}
+				play();
+			}	
+		);
+	</script>
+	<body>
+		<div id="showArea">
+			<ul id="imgArea">
+				<li><img src="images/1.jpg"/></li>
+				<li><img src="images/2.jpg"/></li>
+				<li><img src="images/3.jpg"/></li>
+				<li><img src="images/4.jpg"/></li>
+				<li><img src="images/5.jpg"/></li>
+			</ul>
+			<ul id="btn">
+				<li class="current">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+		</div>
+	</body>
+
+</html>

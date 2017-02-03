@@ -1,0 +1,349 @@
+@charset "utf-8";
+
+/*通用基础样式*/
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body {
+	font-size: 12px;
+	font-family: "微软雅黑", "黑体", Arial;
+	color: #666;
+	background: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: #0B3B8D;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #E4393C;
+}
+
+.lt {
+	float: left;
+}
+
+.rt {
+	float: right;
+}
+
+.clr {
+	clear: both;
+}
+
+div {
+	line-height: 21px;
+	color: #333;
+}
+
+
+/*顶部nav*/
+
+#mini_nav {
+	width: 960px;
+	height: 22px;
+	margin: 0 auto;
+	font-size: 12px;
+	font-family: "宋体", "Arial Narrow";
+	background: url(../images/06/nav_1.png) top left repeat-x;
+	overflow: hidden;
+}
+
+#mini_nav ul {
+	float: right;
+	padding: 5px 3px 0 0;
+}
+
+#mini_nav li {
+	float: left;
+	padding: 0 9px;
+	border-right: 1px #ddd solid;
+	line-height: 12px;
+	color: #666;
+}
+
+#mini_nav .end {
+	border: none;
+}
+
+#main_nav {
+	width: 952px;
+	height: 42px;
+	margin: 0 auto;
+	padding: 7px 4px 6px 4px;
+	font-size: 12px;
+	font-family: "宋体", "Arial Narrow";
+	clear: both;
+}
+
+#main_nav .main {
+	float: left;
+	width: 136px;
+	padding: 0 8px 0 14px;
+	background: url(../images/06/nav_2.png) right center no-repeat;
+	text-align: center;
+}
+
+#main_nav .main strong {
+	padding-right: 4px;
+}
+
+#main_nav .p1 {
+	padding-left: 0;
+}
+
+#main_nav .p6 {
+	width: 73px;
+}
+
+#main_nav .p7 {
+	width: 62px;
+	padding-right: 0;
+	background: none;
+}
+
+#main_nav ul {
+	display: block;
+	clear: both;
+	zoom: 1;
+}
+
+#main_nav li {
+	float: left;
+	padding-right: 8px;
+	line-height: 21px;
+	background: none;
+}
+
+#main_nav li.end {
+	padding-right: 0;
+}
+
+#main_nav .en {
+	font-family: Arial, Tahoma, Verdana, sans-serif;
+}
+
+#main_nav .mblog {
+	padding-right: 11px;
+	background: url(../images/06/mblog_blog_w.png) right top no-repeat;
+}
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+	clear: both;
+}
+
+.titlist {
+	width: 960px;
+	height: 40px;
+}
+
+.titlist h3 {
+	float: left;
+	font-family: "黑体";
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	font-weight: normal;
+	padding-left: 12px;
+}
+
+.searchInput {
+	padding-top: 10px;
+	float: right
+}
+
+.searchInput .submit {
+	float: left;
+	width: 75px;
+	height: 22px;
+	background: url(../images/06/split_v2.png) no-repeat 0 -372px;
+	border: 0px;
+	line-height: 20px;
+	padding: 0 0 2px 0;
+	padding: 2px 0 0 0\0;
+	font-size: 12px;
+	cursor: pointer
+}
+
+.searchInput .txtArea {
+	width: 172px;
+	border: 0px;
+	height: 16px;
+	margin: 2px auto 0px auto;
+	padding: 0;
+	line-height: 16px
+}
+
+.searchInput .inputWarp {
+	float: left;
+	width: 180px;
+	height: 21px;
+	background: url(../images/06/inputkuang2.png) no-repeat 0 0;
+	padding-top: 1px;
+	padding-top: 2px\0;
+	text-align: center;
+	margin: 0 3px 0;
+}
+
+.searchInput .SosoLogo {
+	float: left;
+	width: 16px;
+	height: 16px;
+	background: url(../images/06/split_v2.png) no-repeat -5px -320px;
+	margin-top: 3px;
+}
+
+
+/*主内容区*/
+
+.main {
+	width: 958px;
+	padding-bottom: 20px;
+}
+
+.curPosition2 {
+	width: 918px;
+	height: 36px;
+	margin: 0 auto;
+	padding: 0 20px 0 20px;
+	background: #fafafa;
+}
+
+.curPosition2 .position {
+	float: left;
+	padding: 2px 0 0 7px;
+	margin: 8px 1px 5px 1px;
+}
+
+.curPosition2 .refresh {
+	float: right;
+	margin-top: 8px;
+}
+
+.curPosition {
+	width: 935px;
+	height: 47px;
+	margin: 0 auto;
+	padding: 0px 0 0 0px;
+}
+
+.pageNav {
+	width: 440px;
+	height: 22px;
+	margin: 13px 0 0 255px;
+	padding-left: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	float: left;
+	text-align: center;
+}
+
+.pageNav a,
+.pageNav strong,
+.pageNav span {
+	padding: 2px 6px 2px 6px;
+	overflow: hidden;
+	margin-right: 5px;
+	background: #fff
+}
+
+.pageNav a,
+.pageNav span {
+	height: 20px;
+	line-height: 22px;
+	border: 1px solid #CCDBE4
+}
+
+.pageNav a.f12,
+.pageNav strong.f12,
+.pageNav span {
+	font-size: 12px;
+	padding: 3px 6px 2px 6px;
+	*padding: 3px 6px 1px 6px;
+	/*ie6*/
+	_padding: 3px 6px 1px 6px;
+	/*ie7*/
+	padding: 3px 6px 1px 6px\0;
+	/*ie8*/
+}
+
+.pageNav a:hover {
+	text-decoration: none
+}
+
+.pageNav strong {
+	height: 22px;
+	line-height: 24px
+}
+
+.pageNav .mor {
+	border: 0;
+	padding: 0;
+	height: 21px;
+	line-height: 21px
+}
+
+.pageNav .na {
+	color: #DBE1E6
+}
+
+
+/*瀑布流布局*/
+
+.picList {
+	width: 960px;
+	margin-left: -7px;
+}
+
+
+/*.picList ul{ float:left; margin-left:10px; width:230px}*/
+
+.picList li {
+	/*margin-left: 11px;*/
+	margin: 0 3.5px 8px;
+	width: 230px;
+	border: 1px solid #ced1d6;
+	border-bottom: 3px solid #e3e1e2;
+	background: #fff;
+	text-align: Center;
+	position: absolute;
+}
+
+.picList li p {
+	text-align: left;
+	padding: 8px 15px 3px;
+}
+
+.picList .upTime {
+	padding: 0 15px;
+	background: #f4f4f4;
+	color: #9d9d9d;
+	text-align: left;
+	border-bottom: 1px solid #CED1D6;
+}
+
+.picText {
+	padding-top: 14px;
+}
+
+.picText img {
+	width: 200px;
+}
+.picList .curr {
+	background: #eef3f6;
+	border: 1px solid #a4c6db;
+}
+
+.picList .curr .upTime {
+	background: #eef3f6;
+}
+
+/*.newslist li { height:auto; }*/

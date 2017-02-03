@@ -1,0 +1,757 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>新闻图片页 </title>
+		<link rel="stylesheet" type="text/css" href="css/05.css">
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/jquery.easing.min.js"></script>
+	</head>
+
+	<body>
+		<div class="miniNav">
+			<div class="miniNavInner">
+				<div class="miniNavLeft lt">
+					<a href="javascript:void(0)">某某网首页</a>
+					|
+					<a href="javascript:void(0)">网站地图</a>
+				</div>
+				<div class="miniNavRight rt">
+					<a href="javascript:void(0)" class="login"></a>
+					<a href="javascript:void(0)" class="weiboLogin"></a>
+					<a href="javascript:void(0)" class="qzoneLogin"></a>
+					<a href="javascript:void(0)" class="mailLogin"></a>
+				</div>
+			</div>
+		</div>
+		<div class="page">
+			<div class="header">
+				<div class="linkBox">
+					<div class="linkBoxInner">
+						<h1 class="lt">
+							<a href="javascript:void(0)" title="某某图片">
+								<img src="images/05/picLogo.png"/>
+							</a>
+						</h1>
+						<dl class="newsNav">
+							<dt>
+								新闻
+								<span></span>
+								<ul class="newsList">
+				                    <li><a href="javascript:void(0)" title="新闻" target="_blank">新闻</a></li>
+				                    <li><a href="javascript:void(0)" title="体育" target="_blank">体育</a></li>
+				                    <li><a href="javascript:void(0)" title="娱乐" target="_blank">娱乐</a></li>
+				                    <li><a href="javascript:void(0)" title="音乐" target="_blank">音乐</a></li>
+				                    <li><a href="javascript:void(0)" title="" target="_blank">时尚</a></li>
+				                    <li><a href="javascript:void(0)" title="" target="_blank">育儿</a></li>
+				                    <li><a href="javascript:void(0)" title="" target="_blank">汽车</a></li>
+				                    <li><a href="javascript:void(0)" title="" target="_blank">游戏</a></li>
+				                    <li><a href="javascript:void(0)" title="" target="_blank">数码</a></li>
+									<li><a href="javascript:void(0)" title="" target="_blank">科学</a></li>
+				                    <li><a href="javascript:void(0)" title="" target="_blank">博客</a></li>
+				                    <li><a href="javascript:void(0)" title="" target="_blank">文化</a></li>
+				                    <li><a href="javascript:void(0)" title="" target="_blank">校园</a></li>
+				                    <li><a href="javascript:void(0)" title="" target="_blank">动漫</a></li>
+				                    <li><a href="javascript:void(0)" title="" target="_blank">房产</a></li>
+									<li><a href="javascript:void(0)" title="" target="_blank">儒释道</a></li>
+				                </ul>
+							</dt>
+							<dd>
+								<a href="javascript:void(0)" title="" target="_blank">高清</a>
+							</dd>
+							<dd>
+								<a href="javascript:void(0)" title="" target="_blank">国内</a>
+							</dd>
+							<dd>
+								<a href="javascript:void(0)" title="" target="_blank">国际</a>
+							</dd>
+							<dd>
+								<a href="javascript:void(0)" title="" target="_blank">军事</a>
+							</dd>
+							<dd class="end">
+								<a href="javascript:void(0)" title="" target="_blank">鹅眼</a>
+							</dd>
+						</dl>
+						<dl class="createNav">
+							<dt>原创</dt>
+							<dd>
+								<a href="javascript:void(0)" title="" target="_blank">活着</a>
+							</dd>
+							<dd>
+								<a href="javascript:void(0)" title="" target="_blank">图话</a>
+							</dd>
+							<dd>
+								<a href="javascript:void(0)" title="" target="_blank">焦点人物</a>
+							</dd>
+							<dd>
+								<a href="javascript:void(0)" title="" target="_blank">中国人的一天</a>
+							</dd>
+							<dd>
+								<a href="javascript:void(0)" title="" target="_blank">在线影展</a>
+							</dd>
+							<dd class="moreLinkBtn">
+								<span class="moreLink">更多</span>
+								<div class="moreTips">
+									<p>
+										<a href="javascript:void(0)" title="" target="_blank">一周精选</a>
+									</p>
+
+									<p class="noboder">
+										<a href="javascript:void(0)" title="" target="_blank">图片专题</a>
+									</p>
+
+									<p class="noboder">
+										<a href="javascript:void(0)" title="" target="_blank">谷雨</a>
+									</p>
+
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="clr"></div>
+					<div class="bd">
+						<b class="shadow"></b>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<!-- 焦点图 -->
+				<div id="Pnav00">
+					<div id="focus">
+						<div id="focus_view" class="focus_view">
+							<!--大图-->
+							<ul>
+								<!--IE8前版本透明度兼容写法filter：alpha（）-->
+								<li style="filter:alpha(opacity:100);opacity:1;z-index:1;">
+									<a href="" target="_blank"><img id="bigimg_1" src="" /></a>
+								</li>
+								<li>
+									<a href="" target="_blank"><img src="" /></a>
+								</li>
+								<li>
+									<a href="" target="_blank"><img src="" /></a>
+								</li>
+								<li>
+									<a href="" target="_blank"><img src="" /></a>
+								</li>
+								<li>
+									<a href="" target="_blank"><img src="" /></a>
+								</li>
+								<li>
+									<a href="" target="_blank"><img src="" /></a>
+								</li>
+								<li>
+									<a href="" target="_blank"><img src="" /></a>
+								</li>
+								<li>
+									<a href="" target="_blank"><img src="" /></a>
+								</li>
+								<li>
+									<a href="" target="_blank"><img src="" /></a>
+								</li>
+								<li>
+									<a href="" target="_blank"><img src="" /></a>
+								</li>
+								<li>
+									<a href="" target="_blank"><img src="" /></a>
+								</li>
+								<li>
+									<a href="" target="_blank"><img src="" /></a>
+								</li>
+								<li>
+									<a href="" target="_blank"><img src="" /></a>
+								</li>
+								<li>
+									<a href="" target="_blank"><img src="" /></a>
+								</li>
+							</ul>
+						</div>
+						<div id="focus_text" class="focus_text">
+							<!--标题-->
+							<ul>
+								<li class="show">
+									<h3><a href="" target="_blank"></a></h3></li>
+								<li>
+									<h3><a href="" target="_blank"></a></h3></li>
+								<li>
+									<h3><a href="" target="_blank"></a></h3></li>
+								<li>
+									<h3><a href="" target="_blank"></a></h3></li>
+								<li>
+									<h3><a href="" target="_blank"></a></h3></li>
+								<li>
+									<h3><a href="" target="_blank"></a></h3></li>
+								<li>
+									<h3><a href="" target="_blank"></a></h3></li>
+								<li>
+									<h3><a href="" target="_blank"></a></h3></li>
+								<li>
+									<h3><a href="" target="_blank"></a></h3></li>
+								<li>
+									<h3><a href="" target="_blank"></a></h3></li>
+								<li>
+									<h3><a href="" target="_blank"></a></h3></li>
+								<li>
+									<h3><a href="" target="_blank"></a></h3></li>
+								<li>
+									<h3><a href="" target="_blank"></a></h3></li>
+								<li>
+									<h3><a href="" target="_blank"></a></h3></li>
+							</ul>
+							<div id="num">
+								<!--计数专用-->
+								1/12
+							</div>
+						</div>
+						<div id="focus_slider" class="focus_slider">
+							<!--缩略图-->
+							<div><span id="prev" class="prev"></span></div>
+							<div class="mask">
+								<ul>
+									<li class="current">
+										<a href="" target="_blank"><img src="" /> </a>
+									</li>
+									<li>
+										<a href="" target="_blank"><img src="" /> </a>
+									</li>
+									<li>
+										<a href="" target="_blank"><img src="" /> </a>
+									</li>
+									<li>
+										<a href="" target="_blank"><img src="" /> </a>
+									</li>
+									<li>
+										<a href="" target="_blank"><img src="" /> </a>
+									</li>
+									<li>
+										<a href="" target="_blank"><img src="" /> </a>
+									</li>
+									<li>
+										<a href="" target="_blank"><img src="" /> </a>
+									</li>
+									<li>
+										<a href="" target="_blank"><img src="" /> </a>
+									</li>
+									<li>
+										<a href="" target="_blank"><img src="" /> </a>
+									</li>
+									<li>
+										<a href="" target="_blank"><img src="" /> </a>
+									</li>
+									<li>
+										<a href="" target="_blank"><img src="" /> </a>
+									</li>
+									<li>
+										<a href="" target="_blank"><img src="" /> </a>
+									</li>
+									<li>
+										<a href="" target="_blank"><img src="" /> </a>
+									</li>
+									<li>
+										<a href="" target="_blank"><img src="" /> </a>
+									</li>
+								</ul>
+							</div>
+							<div><span id="next" class="next"></span></div>
+						</div>
+					</div>
+				</div>
+				<script src="js/05focus.js"></script>
+				<!-- /焦点图 -->
+				<!--影响力-->
+				<div class="layout style0" id="Pnav01">
+					<div class="hd">
+						<h2>影像力</h2>
+						<b class="border"></b>
+						<a class="changeBtn" id="xxlChg">
+							<i></i> 换一换
+						</a>
+					</div>
+					<div class="bd">
+						<ul class="picLB" id="picLBxxl">
+							<!-- 活着 -->
+							<li>
+								<dl class="picDl huozhe">
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/living/l606.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/08/ninja147159898839241.jpg"></a>
+										<div class="ftBox">
+											<h3 class="name" target="_blank"><b><a href="http://news.qq.com/photon/living.htm" target="_blank">活着</a></b></h3>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/living/l606.html">纽约八大道的中国迁徙故事</a>
+											</div>
+											<div class="text">发展最快的华人聚居区不失中国味道</div>
+											<div class="qr">
+												<i class="icon-arr"></i><img class="fl" src="http://img1.gtimg.com/news/pics/hv1/164/7/1477/96043874.jpg" alt="活着微信">
+												<div class="text">
+													扫二维码 <br> 收听《活着》微信
+												</div>
+											</div>
+										</div>
+									</dd>
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/living/l605.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/08/ninja147150917539800.jpg"></a>
+										<div class="ftBox">
+											<h3 class="name" target="_blank"><b><a href="http://news.qq.com/photon/living.htm" target="_blank">活着</a></b></h3>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/living/l605.html">守护三沙那片蓝</a>
+											</div>
+											<div class="text">中国南海令人震撼的美</div>
+											<div class="qr">
+												<i class="icon-arr"></i><img class="fl" src="http://img1.gtimg.com/news/pics/hv1/164/7/1477/96043874.jpg" alt="活着微信">
+												<div class="text">
+													扫二维码 <br> 收听《活着》微信
+												</div>
+											</div>
+										</div>
+									</dd>
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/living/l604.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/08/ninja147134128133614.jpg"></a>
+										<div class="ftBox">
+											<h3 class="name" target="_blank"><b><a href="http://news.qq.com/photon/living.htm" target="_blank">活着</a></b></h3>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/living/l604.html">海归女的西洋礼仪革命</a>
+											</div>
+											<div class="text">十天八万元的社交名媛生产线</div>
+											<div class="qr">
+												<i class="icon-arr"></i><img class="fl" src="http://img1.gtimg.com/news/pics/hv1/164/7/1477/96043874.jpg" alt="活着微信">
+												<div class="text">
+													扫二维码 <br> 收听《活着》微信
+												</div>
+											</div>
+										</div>
+									</dd>
+								</dl>
+							</li>
+
+							<!-- 记录/焦点人物 -->
+							<li>
+								<dl class="picDl jilu">
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/jdrw/j93.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/07/ninja146839859738306.jpg"></a>
+										<div class="ftBox">
+											<h2 class="name" target="_blank"><b><a href="http://news.qq.com/jdrw/index.html" target="_blank">焦点人物</a></b></h2>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/jdrw/j93.html">华人首善吕志和</a>
+											</div>
+											<div class="text">吕志和用了12年的时间成为了澳门…
+											</div>
+										</div>
+									</dd>
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/jdrw/j92.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/04/ninja146174607353581.jpg"></a>
+										<div class="ftBox">
+											<h2 class="name" target="_blank"><b><a href="http://news.qq.com/jdrw/index.html" target="_blank">焦点人物</a></b></h2>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/jdrw/j92.html">洪道德：我的五千万被调解没了</a>
+											</div>
+											<div class="text">刑法学家状告聂树斌案律师。</div>
+										</div>
+									</dd>
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/jdrw/j91.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/04/ninja146174630149883.jpg"></a>
+										<div class="ftBox">
+											<h2 class="name" target="_blank"><b><a href="http://news.qq.com/jdrw/index.html" target="_blank">焦点人物</a></b></h2>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/jdrw/j91.html">杨金生：医改矛盾核心是钱</a>
+											</div>
+											<div class="text">医改要“四方联动”。</div>
+										</div>
+									</dd>
+									<!--[if !IE]>|xGv00|f7b58e635a2fce030b7f4c84e1117798<![endif]-->
+								</dl>
+							</li>
+
+							<!-- 图话 -->
+							<li>
+								<dl class="picDl tuhua">
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/tuhua/shenqi.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/08/ninja147090457222686.jpg"></a>
+										<div class="ftBox">
+											<h2 class="name" target="_blank"><b><a href="http://news.qq.com/photon/tuhua.htm" target="_blank">图话</a></b></h2>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/tuhua/shenqi.html">这些“中国神器”在西方火了</a>
+											</div>
+											<div class="text">另一种中国制造。</div>
+										</div>
+									</dd>
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/tuhua/sporttalents.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/08/ninja147087162091920.jpg"></a>
+										<div class="ftBox">
+											<h2 class="name" target="_blank"><b><a href="http://news.qq.com/photon/tuhua.htm" target="_blank">图话</a></b></h2>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/tuhua/sporttalents.html">图话：草根运动达人的江湖</a>
+											</div>
+											<div class="text">奥运选手身处庙堂，他们则混在草根江湖…
+											</div>
+										</div>
+									</dd>
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/tuhua/Olympic.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/08/ninja147039361077130.jpg"></a>
+										<div class="ftBox">
+											<h2 class="name" target="_blank"><b><a href="http://news.qq.com/photon/tuhua.htm" target="_blank">图话</a></b></h2>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/tuhua/Olympic.html">中国奥运的那些“第一次”</a>
+											</div>
+											<div class="text">中国第一位奥运选手差点不能回国</div>
+										</div>
+									</dd>
+									<!--[if !IE]>|xGv00|afbc77ce38d9698b8565a21a62cafdfc<![endif]-->
+								</dl>
+							</li>
+
+							<!-- 中国人的一天 -->
+							<li>
+								<dl class="picDl today">
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/oneday/2422.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/08/ninja147124544472250.jpg"></a>
+										<div class="ftBox">
+											<h2 class="name" target="_blank"><b><a href="http://oneday.qq.com/collect.html" target="_blank">中国人的一天</a></b></h2>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/oneday/2422.html">医生兼职教魔方 收徒300人</a>
+											</div>
+											<div class="text">第2422期</div>
+											<div class="qr">
+												<i class="icon-arr"></i><img class="fl" src="http://img1.gtimg.com/news/pics/hv1/178/192/1477/96091063.png" alt="中国人的一天微信">
+												<div class="text">
+													扫二维码 <br> 收看《中国人的一天》微信
+												</div>
+											</div>
+										</div>
+									</dd>
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/oneday/2421.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/08/ninja147131928149211.jpg"></a>
+										<div class="ftBox">
+											<h2 bossZone="chinadaylogo1" class="name" target="_blank"><b><a href="http://oneday.qq.com/collect.html" target="_blank">中国人的一天</a></b></h2>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/oneday/2421.html">租住在窑洞里的高考状元</a>
+											</div>
+											<div class="text">第2421期</div>
+											<div class="qr">
+												<i class="icon-arr"></i><img class="fl" src="http://img1.gtimg.com/news/pics/hv1/178/192/1477/96091063.png" alt="中国人的一天微信">
+												<div class="text">
+													扫二维码 <br> 收看《中国人的一天》微信
+												</div>
+											</div>
+										</div>
+									</dd>
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/oneday/2420.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/08/ninja147121782862772.jpg"></a>
+										<div class="ftBox">
+											<h2 class="name" target="_blank"><b><a href="http://oneday.qq.com/collect.html" target="_blank">中国人的一天</a></b></h2>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/oneday/2420.html">40年演出1.5万场惊艳世界</a>
+											</div>
+											<div class="text">第2420期</div>
+											<div class="qr">
+												<i class="icon-arr"></i><img class="fl" src="http://img1.gtimg.com/news/pics/hv1/178/192/1477/96091063.png" alt="中国人的一天微信">
+												<div class="text">
+													扫二维码 <br> 收看《中国人的一天》微信
+												</div>
+											</div>
+										</div>
+									</dd>
+								</dl>
+							</li>
+
+							<!-- 在线影展 -->
+							<li>
+								<dl class="picDl yingzhan">
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/zaixianyingzhan/travellinginUK.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/08/ninja147159944283802.jpg"></a>
+										<div class="ftBox">
+											<h2 class="name" target="_blank"><b><a href="http://news.qq.com/photon/photoex.htm" target="_blank">在线影展</a></b></h2>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/zaixianyingzhan/travellinginUK.html">诗意地行走在英国街头</a>
+											</div>
+											<div class="text">他的文字有图像感，图像则有诗意</div>
+										</div>
+									</dd>
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/zaixianyingzhan/jade.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/08/ninja147064579296922.jpg"></a>
+										<div class="ftBox">
+											<h2 class="name" target="_blank"><b><a href="http://news.qq.com/photon/photoex.htm" target="_blank">在线影展</a></b></h2>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/zaixianyingzhan/jade.html">翡翠的血色之路</a>
+											</div>
+											<div class="text">翡翠狂热背后的血汗代价</div>
+										</div>
+									</dd>
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/zaixianyingzhan/pengxiangjie.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/08/ninja147028442577410.jpg"></a>
+										<div class="ftBox">
+											<h2 class="name" target="_blank"><b><a href="http://news.qq.com/photon/photoex.htm" target="_blank">在线影展</a></b></h2>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/zaixianyingzhan/pengxiangjie.html">彭祥杰：游走在城市边缘的人</a>
+											</div>
+											<div class="text">再也没人给你打两小时电话聊摄影了</div>
+										</div>
+									</dd>
+								</dl>
+							</li>
+
+							<!-- 鹅眼 -->
+							<li>
+								<dl class="picDl jingxuan">
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/eyan/ey106.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/08/ninja147150732724208.jpg"></a>
+										<div class="ftBox">
+											<h2 class="name" target="_blank"><b><a href="http://news.qq.com/photon/photostory/eyhz.htm" target="_blank">鹅眼</a></b></h2>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/eyan/ey106.html">中国摄影师独探里约贫民窟</a>
+											</div>
+											<div class="text">中国摄影师独身一人探访里约贫民窟…
+											</div>
+										</div>
+									</dd>
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/eyan/ey105.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/08/ninja147079693089840.jpg"></a>
+										<div class="ftBox">
+											<h2 class="name" target="_blank"><b><a href="http://news.qq.com/photon/photostory/eyhz.htm" target="_blank">鹅眼</a></b></h2>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/eyan/ey105.html">巴西红灯区：奥运场外生意正火</a>
+											</div>
+											<div class="text">在巴西性工作者看来，奥运就像嘉年…
+											</div>
+										</div>
+									</dd>
+									<dd>
+										<a target="_blank" class="pic" href="http://news.qq.com/original/eyan/ey104.html"><img alt="" src="http://img1.gtimg.com/ninja/1/2016/08/ninja147072423247874.jpg"></a>
+										<div class="ftBox">
+											<h2 class="name" target="_blank"><b><a href="http://news.qq.com/photon/photostory/eyhz.htm" target="_blank">鹅眼</a></b></h2>
+											<div class="tit">
+												<a title="" target="_blank" href="http://news.qq.com/original/eyan/ey104.html">金沙江畔山村与污染为邻</a>
+											</div>
+											<div class="text">村庄饱受多个铜矿的污染困扰</div>
+										</div>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<script src="js/05yingxiangli.js"></script>
+				<!--/影响力-->
+				<!--主内容区 -->
+				<div class="layout">
+					<div class="chief" role="main">
+						<!--role增强语义-->
+						<div id="news">
+							<div class="list first">
+								<div class="Q-pList">
+									<div class="content">
+										<em><a target="_blank" class="linkto" href="http://news.qq.com/a/20160820/021133.htm">男子外出扫墓 房屋被用铲车推成废墟</a></em>
+										<ul>
+											<li class="pic">
+												<a target="_blank" href="http://news.qq.com/a/20160820/021133.htm"><img src="images/05/1.jpg"></a>
+											</li>
+											<li class="pic">
+												<a target="_blank" href="http://news.qq.com/a/20160820/021133.htm"><img src="images/05/2.jpg"></a>
+											</li>
+											<li class="pic">
+												<a target="_blank" href="http://news.qq.com/a/20160820/021133.htm"><img src="images/05/3.jpg"></a>
+											</li>
+										</ul>
+									</div>
+									<div class="st">
+										<div class="info">
+											<span class="from">大河网</span><span class="keywords"></span>
+										</div>
+										<div class="btns">
+											<a class="discuzBtn" title="评论数" target="_blank">2375</a>
+											<div class="shareBtn">
+												<ul class="shareBtn16" id="shares">
+													<li class="jiantou"></li>
+													<li class="shareButton" id="share2wb">
+														<a onclick="postToWb(this.name,this.href,this.id); return false;" title="腾讯微博" class="sharewb" id="http://news.qq.com/a/20160820/021133.htm" name="男子外出扫墓 房屋被用铲车推成废墟" href="http://inews.gtimg.com/newsapp_ls/0/503855447_640330/0">
+															腾讯微博
+														</a>
+													</li>
+													<li class="shareButton" id="share2qzone">
+														<a onclick="postToQzone(this.name,'',this.href,this.id); return false;" title="QQ空间" class="shareqzone" id="http://news.qq.com/a/20160820/021133.htm" name="男子外出扫墓 房屋被用铲车推成废墟" href="http://inews.gtimg.com/newsapp_ls/0/503855447_640330/0">
+															QQ空间
+														</a>
+													</li>
+													<li class="shareButton" id="share2qq">
+														<a onclick="shareToQQ(this.name,this.href,this.id); return false;" title="QQ好友" class="sharepengyou" id="http://news.qq.com/a/20160820/021133.htm" name="男子外出扫墓 房屋被用铲车推成废墟" href="http://inews.gtimg.com/newsapp_ls/0/503855447_640330/0">
+															QQ好友
+														</a>
+													</li>
+													<li id="share2sina" class="shareButton">
+														<a onclick="shareToSina(this.name,this.href,this.id); return false;" title="新浪微博" class="sharesina" id="http://news.qq.com/a/20160820/021133.htm" name="男子外出扫墓 房屋被用铲车推成废墟" href="http://inews.gtimg.com/newsapp_ls/0/503855447_640330/0">
+															新浪微博
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="Q-pList">
+									<div class="content">
+										<em><a target="_blank" class="linkto" href="http://news.qq.com/a/20160820/021669.htm">奥运上的多胞胎 帅哥美女傻傻分不清</a></em>
+										<ul>
+											<li class="pic">
+												<a target="_blank" href="http://news.qq.com/a/20160820/021669.htm"><img src="images/05/7.jpg"></a>
+											</li>
+											<li class="pic">
+												<a target="_blank" href="http://news.qq.com/a/20160820/021669.htm"><img src="images/05/8.jpg"></a>
+											</li>
+											<li class="pic">
+												<a target="_blank" href="http://news.qq.com/a/20160820/021669.htm"><img src="images/05/9.jpg"></a>
+											</li>
+										</ul>
+									</div>
+									<div class="st">
+										<div class="info">
+											<span class="from">综合</span><span class="keywords"><a href="#">铁人三项</a><a href="#">阿里斯泰尔</a><a href="#">花样游泳</a><a href="#">奥运会</a></span>
+										</div>
+										<div class="btns">
+											<a class="discuzBtn" title="评论数" target="_blank" href="http://coral.qq.com/1509326973">19</a>
+											<div class="shareBtn">
+												<ul class="shareBtn16" id="shares">
+													<li class="jiantou"></li>
+													<li class="shareButton" id="share2wb">
+														<a onclick="postToWb(this.name,this.href,this.id); return false;" title="腾讯微博" class="sharewb" id="http://news.qq.com/a/20160820/021669.htm" name="奥运上的多胞胎 帅哥美女傻傻分不清" href="http://inews.gtimg.com/newsapp_ls/0/503891158_640330/0">
+															腾讯微博
+														</a>
+													</li>
+													<li class="shareButton" id="share2qzone">
+														<a onclick="postToQzone(this.name,'',this.href,this.id); return false;" title="QQ空间" class="shareqzone" id="http://news.qq.com/a/20160820/021669.htm" name="奥运上的多胞胎 帅哥美女傻傻分不清" href="http://inews.gtimg.com/newsapp_ls/0/503891158_640330/0">
+															QQ空间
+														</a>
+													</li>
+													<li class="shareButton" id="share2qq">
+														<a onclick="shareToQQ(this.name,this.href,this.id); return false;" title="QQ好友" class="sharepengyou" id="http://news.qq.com/a/20160820/021669.htm" name="奥运上的多胞胎 帅哥美女傻傻分不清" href="http://inews.gtimg.com/newsapp_ls/0/503891158_640330/0">
+															QQ好友
+														</a>
+													</li>
+													<li id="share2sina" class="shareButton">
+														<a onclick="shareToSina(this.name,this.href,this.id); return false;" title="新浪微博" class="sharesina" id="http://news.qq.com/a/20160820/021669.htm" name="奥运上的多胞胎 帅哥美女傻傻分不清" href="http://inews.gtimg.com/newsapp_ls/0/503891158_640330/0">
+															新浪微博
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="Q-pList">
+									<div class="content">
+										<em><a target="_blank" class="linkto" href="http://news.qq.com/a/20160820/017308.htm">她为救姐姐遭毁容 如今要去纽约走秀</a></em>
+										<ul>
+											<li class="pic">
+												<a target="_blank" href="http://news.qq.com/a/20160820/017308.htm"><img src="images/05/4.jpg"></a>
+											</li>
+											<li class="pic">
+												<a target="_blank" href="http://news.qq.com/a/20160820/017308.htm"><img src="images/05/5.jpg"></a>
+											</li>
+											<li class="pic">
+												<a target="_blank" href="http://news.qq.com/a/20160820/017308.htm"><img src="images/05/6.jpg"></a>
+											</li>
+										</ul>
+									</div>
+									<div class="st">
+										<div class="info">
+											<span class="from">腾讯国际新闻</span><span class="keywords"></span>
+										</div>
+										<div class="btns">
+											<a class="discuzBtn" title="评论数" target="_blank" href="http://coral.qq.com/1509192170">275</a>
+											<div class="shareBtn">
+												<ul class="shareBtn16" id="shares">
+													<li class="jiantou">
+														<li class="shareButton" id="share2wb">
+															<a onclick="postToWb(this.name,this.href,this.id); return false;" title="腾讯微博" class="sharewb" id="http://news.qq.com/a/20160820/017308.htm" name="她为救姐姐遭毁容 如今要去纽约走秀" href="http://inews.gtimg.com/newsapp_ls/0/503887091_640330/0">
+																腾讯微博
+															</a>
+														</li>
+														<li class="shareButton" id="share2qzone">
+															<a onclick="postToQzone(this.name,'',this.href,this.id); return false;" title="QQ空间" class="shareqzone" id="http://news.qq.com/a/20160820/017308.htm" name="她为救姐姐遭毁容 如今要去纽约走秀" href="http://inews.gtimg.com/newsapp_ls/0/503887091_640330/0">
+																QQ空间
+															</a>
+														</li>
+														<li class="shareButton" id="share2qq">
+															<a onclick="shareToQQ(this.name,this.href,this.id); return false;" title="QQ好友" class="sharepengyou" id="http://news.qq.com/a/20160820/017308.htm" name="她为救姐姐遭毁容 如今要去纽约走秀" href="http://inews.gtimg.com/newsapp_ls/0/503887091_640330/0">
+																QQ好友
+															</a>
+														</li>
+														<li id="share2sina" class="shareButton">
+															<a onclick="shareToSina(this.name,this.href,this.id); return false;" title="新浪微博" class="sharesina" id="http://news.qq.com/a/20160820/017308.htm" name="她为救姐姐遭毁容 如今要去纽约走秀" href="http://inews.gtimg.com/newsapp_ls/0/503887091_640330/0">
+																新浪微博
+															</a>
+														</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a href="#" title="点击查看全部" target="_blank" class="more">点击查看全部</a>
+					</div>
+					<div class="extra">
+						<!-- 一周图片精选 -->
+						<div class="emodule jingxuan">
+							<div class="emhd">
+								<a class="logomore" href="http://news.qq.com/photon/selective/wqhz.htm" target="_blank">
+									<div></div>
+								</a>
+								<a class="modulemore" href="http://news.qq.com/photon/selective/wqhz.htm" target="_blank">更多</a>
+							</div>
+							<ul class="emcontent">
+								<li class="embig">
+									<a class="emimg" target="_blank" href="http://news.qq.com/original/yizhoutupian/week225.html"><img class="embg" alt="" src="http://img1.gtimg.com/ninja/1/2016/06/ninja146614703017433.jpg"></a>
+									<a class="emtxt" target="_blank" href="http://news.qq.com/original/yizhoutupian/week225.html">一周图片精选6.11&#8212;17</a>
+								</li>
+								<li>
+									<a target="_blank" href="http://news.qq.com/original/yizhoutupian/week224.html"><i></i>一周图片精选6.4-6.10</a>
+								</li>
+								<li>
+									<a target="_blank" href="http://news.qq.com/original/yizhoutupian/week223.html"><i></i>一周图片精选5.28-6.3</a>
+								</li>
+							</ul>
+						</div>
+						<!-- 发现世界/范儿姐 -->
+						<div class="emodule gjfht">
+							<div class="emhd2">
+								<a href="http://news.qq.com/world_index.shtml" target="_blank">
+									<div class="tab_gjzt cur">发现世界</div>
+								</a>
+								<a href="http://news.qq.com/world_index.shtml" target="_blank">
+									<div class="tab_fht">范儿姐</div>
+								</a>
+								<a class="modulemore" href="http://news.qq.com/world_index.shtml" target="_blank">更多</a>
+							</div>
+							<ul class="emcontent gj">
+								<li class="embig">
+									<a class="emimg" target="_blank" href="http://news.qq.com/a/20160501/006019.htm"><img class="embg" src="http://img1.gtimg.com/news/pics/hv1/88/247/2061/134079598.jpg"></a>
+									<a class="emtxt" target="_blank" href="http://news.qq.com/a/20160501/006019.htm">社交媒体改变伊朗女性 名牌整容受欢迎</a>
+								</li>
+								<li>
+									<a target="_blank" href="http://news.qq.com/a/20160420/065031.htm"><i></i>【发现世界】那些挣扎在全球每一个角落</a>
+								</li>
+								<li>
+									<a target="_blank" href="http://news.qq.com/a/20160414/041672.htm"><i></i>澳大利亚大堡礁严重白化 未来或彻底消失</a>
+								</li>
+							</ul>
+							<ul class="emcontent fht">
+								<li class="embig">
+									<a class="emimg" target="_blank" href="http://news.qq.com/a/20160816/030461.htm"><img class="embg" src="http://img1.gtimg.com/news/pics/hv1/90/208/2114/137515980.jpg"></a>
+									<a class="emtxt" target="_blank" href="http://news.qq.com/a/20160816/030461.htm">【范儿姐】宝强不哭！他们离婚比你贵多了</a>
+								</li>
+								<li>
+									<a target="_blank" href="http://news.qq.com/a/20160815/028513.htm"><i></i>【范儿姐】共同拼搏才是最佳爱侣 他们牵…
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="http://news.qq.com/a/20160807/013876.htm"><i></i>【范儿姐】这个出产美好肉体的国度 不只…
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<script src="js/mainContent.js"></script>
+		<a class="aScroll" href="javascript:void(0)" onclick="window.scrollTo(0,0)" id="goTop"></a>
+	</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+	<head>
+		<meta charset="UTF-8">
+		<title>盒子动态排序</title>
+		<script src="js/jquery-1.11.3.min.js"></script>
+	</head>
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		.alc{
+			margin:0 auto;
+			width:830px;
+		}
+		.js-sort{
+			margin:20px auto 0;
+			width:830px;
+			height:620px;
+			overflow:hidden;
+		}
+		.js-list{
+			position:relative;
+			width:830px;
+			height:620px;
+		}
+		.js-list li{
+			position:absolute;
+			width:198px;
+			height:198px;
+			border:1px solid #f50;
+			color:#fff;
+			list-style:none;
+			border-radius:5px;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(
+			function(){
+				//随机颜色部分
+				var num=12,
+					data = [];
+				for(var i = 0; i <= num; i++){
+					var serialNum = Math.floor(Math.random() * 20);
+					data.push(serialNum);//判断数字是否已经存在？
+				}
+				function getColor(){
+					var num = Math.floor(Math.random() * 16777215);//十进制白色为基色，黑色十进制数为0，这样可以取到之间的所有颜色的十进制数
+					var color = num.toString(16);
+					color.length < 6 ? color = "0" + color : null;
+					return color;
+				}
+				//设置随机位置
+				var pos = [];//存放位置信息
+				var $ul = $("#js-list");
+				for(var i = 0; i < num; i++){
+					var l = (i % 4) * 210;
+					var t = Math.floor(i / 4) * 210;
+					var p = {"left":l,"top":t};
+					pos.push(p);
+					$ul.append('<li size="' + data[i] + '" style="background-color:#' + getColor() + ';left:' + l + 'px;top:' + t + 'px;">No.'+ data[i] + '</li>');
+				}
+				
+				var $ulChildren = $ul.children();
+				for(var i = 0; i < num; i++){
+					$ulChildren[i].size = parseInt($($ulChildren[i]).attr("size"));//将自定义size属性转换为数字类型
+				}
+				$("#btn").click(function(){
+					var t;
+					for(var i = 0; i < num; i++){
+						for(var j = 0; j < num - 1; j++){
+							if($ulChildren[j].size > $ulChildren[j + 1].size){
+								t = $ulChildren[j];
+								$ulChildren[j] = $ulChildren[j + 1];
+								$ulChildren[j + 1] = t;
+							}
+						}
+					}//经典比较大小后排序算法，改变数组中$ulChildren[i]对应的li，进而改变li的位置值
+					for(var i = 0; i < num; i++){
+						$($ulChildren[i]).animate({"left":pos[i].left,"top":pos[i].top},600);
+					}
+				});
+		});
+	</script>
+	<body>
+		<div class="alc">
+			<div class="js-sort">
+				<ul class="js-list" id="js-list"></ul>
+			</div>
+			<button id="btn">按编号排序</button>
+		</div>
+	</body>
+</html>

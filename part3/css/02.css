@@ -1,0 +1,159 @@
+@charset "utf-8";
+/*通用基础样式*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body{
+	font-size:12px;
+	font-family: "微软雅黑","黑体",Arial;
+	color: #666;
+	background: #fff;
+}
+a{
+	text-decoration: none;
+	color: #666;
+}
+a:hover{
+	text-decoration: underline;
+	color: #E4393C;
+}
+.lt{
+	float: left;
+}
+.rt{
+	float: right;
+}
+.clr{
+	clear: both;
+}
+
+.topNav{
+	height: 119px;
+	border-bottom: 1px solid #d6d6d6;
+}
+.topBar{
+	width:1311px;
+	height: 68px;
+	margin: 0 auto;
+	padding-top: 54px;
+}
+.topBar>span{
+	display: block;
+	margin-top: 9px;
+}
+.topBar ul li{
+	float: left;
+	font-size: 16px;
+	margin: 13px 0 0 84px;
+	width: 76px;
+	height: 50px;
+	text-align: center;
+}
+.topBar ul li:nth-child(3){
+	border-bottom: 2px solid #72a672;
+}
+.topBar ul li:nth-child(3) a{
+	color: #72a672;
+}
+.topBar>div span:first-child{
+	display: block;
+	width: 67px;
+	height: 25px;
+	background-color: #2cb901;
+	color: #FFFFFF;
+	font-size: 13px;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 25px;
+	float: left;
+	margin-right: 36px;
+}
+.topBar>div span:last-child{
+	display: block;
+	width: 65px;
+	height: 23px;
+	background-color: #FFFFFF;
+	color: #2cb901;
+	font-size: 13px;
+	border: 1px solid #2cb901;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 25px;
+	float: left;
+}
+/*头部*/
+.head{
+	width: 1366px;
+	height: 790px;
+	margin: 0 auto;
+}
+.head ul{
+	width: 516px;
+	margin-left: 383px;
+}
+.head ul li{
+	float: left;
+}
+
+
+.container{
+	width: 1200px;
+	margin: 40px auto 0;
+	border-bottom: 1px solid #CCCCCC;
+}
+.newsTitle div:first-child{
+	font-size: 23px;
+}
+.newsTitle div:last-child{
+	font-size: 11px;
+	margin-top: 20px;
+}
+#page{
+	width: 988px;
+	margin: 34px auto 89px;
+	text-align: center;
+}
+#page div:first-child{
+	font-size: 18px;
+}
+#page div:nth-child(2){
+	font-size: 11px;
+	color: #00eb16;
+	margin:19px auto 29px;
+}
+#page p{
+	font-size: 12px;
+	line-height: 30px;
+	text-align: left;
+	text-indent:2em;
+}
+#page img{
+	padding-bottom: 89px;
+}
+#pageNo{
+	width: 988px;
+	margin: 31px auto 81px;
+}
+
+/*底部导航*/
+.footer{
+	margin: 77px auto 0;
+	text-align: center;
+	background-color: #fbfbfb;
+	padding-top: 47px;
+}
+.footer h2{
+	font-size: 29px;
+	color: #19af00;
+}
+.share a{
+	padding-right: 11px;
+}
+.footerFunc a{
+	padding:0 24px 0 27px;
+}
+.en{
+	margin: 27px 0 0;
+}

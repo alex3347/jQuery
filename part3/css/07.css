@@ -1,0 +1,762 @@
+@charset "utf-8";
+
+/*通用基础样式*/
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body {
+	font-size: 12px;
+	font-family: "微软雅黑", "黑体", Arial;
+	color: #666;
+	background: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: #0B3B8D;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #E4393C;
+}
+
+.lt {
+	float: left;
+}
+
+.rt {
+	float: right;
+}
+
+.clr {
+	clear: both;
+}
+
+div {
+	line-height: 21px;
+	color: #333;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+em {
+	font-style: normal;
+}
+
+
+/*顶部nav*/
+
+.miniNav {
+	min-width: 1000px;
+	border-bottom: 1px solid #d6d6d6;
+	border-top: 1px solid #d6d6d6;
+	background: #fff;
+	height: 38px
+}
+
+.miniNavInner {
+	padding: 0 7px;
+	color: #5c5b5b;
+	height: 38px;
+	font: 12px/38px "Microsoft YaHei", "simsun", "Arial Narrow";
+	position: relative;
+}
+
+.miniNavTitle {
+	float: left;
+	padding-top: 7px;
+	line-height: 1
+}
+
+.logoImg {
+	height: 24px;
+}
+
+#miniNavTitleContent {
+	float: left;
+	border-left: 1px solid #d6d6d6;
+	height: 26px;
+	line-height: 18px;
+	margin: 6px 0 0 20px;
+	padding-left: 9px
+}
+
+#miniNavTitleContent li {
+	margin: 0 4px 0 3px;
+	float: left
+}
+
+#miniNavTitleContent a {
+	text-decoration: none;
+	color: #5c5c5c;
+	line-height: 25px;
+	padding: 0 6px
+}
+
+#miniNavTitleContent a:hover {
+	text-decoration: none;
+	background: #3a9bea;
+	color: #fff
+}
+
+#miniNavTitleContent .active {
+	color: #2c95e8
+}
+
+.miniNavRight a {
+	display: block;
+	height: 38px;
+	color: #5c5c5c;
+	float: left;
+}
+
+.miniNavRight a:not(:first-child) {
+	padding: 0 8px 0 27px;
+	/*overflow: hidden;*/
+	background: url(../images/07/login_v0.1.png) no-repeat;
+}
+
+.miniNavRight .login {
+	float: left;
+	width: 73px;
+	text-align: center;
+	border: 1px solid #e6e6e6;
+	border-width: 0 1px;
+	cursor: pointer;
+	line-height: 38px;
+}
+
+.miniNavInner .miniNavRight .weiboLogin {
+	background-position: 9px 10px
+}
+
+.miniNavInner .miniNavRight .qzoneLogin {
+	background-position: 9px -20px
+}
+
+.miniNavInner .miniNavRight .mailLogin {
+	background-position: 9px -50px
+}
+
+.miniNavInner .miniNavRight .dyLink {
+	background-position: 9px -356px
+}
+
+.miniNavInner .miniNavRight .weiboLogin:hover {
+	background-position: 9px -110px
+}
+
+.miniNavInner .miniNavRight .qzoneLogin:hover {
+	background-position: 9px -140px
+}
+
+.miniNavInner .miniNavRight .mailLogin:hover {
+	background-position: 9px -170px
+}
+
+.miniNavInner .miniNavRight .dyLink:hover {
+	background-position: 9px -389px
+}
+
+
+/*main区域*/
+
+.main {
+	font-size: 12px;
+	color: #000;
+	/*position: relative;*/
+}
+
+.title {
+	height: 70px;
+	position: relative;
+	margin: 0 92px;
+}
+
+.title h1 {
+	color: #000;
+	font: 26px/70px "Microsoft YaHei", arial
+}
+
+.toolBar {
+	position: absolute;
+	right: 0;
+	top: 19px
+}
+
+.toolBar li {
+	float: left;
+	font-size: 12px;
+	margin-left: 10px;
+	color: #5C5C5C
+}
+
+.g-btn-a,
+.g-btn-a span,
+.g-btn-a i,
+.shareList .menu-bd,
+.g-btn-b i,
+.g-btn-c,
+.btn a,
+.sBtn,
+.endBtn a {
+	display: inline-block;
+	background: url(../images/07/hd_sprite_v1.0.png) no-repeat 0 0
+}
+
+.g-btn-a {
+	height: 32px;
+	background-position: -134px -266px;
+	display: inline-block;
+	padding-left: 8px;
+	line-height: 32px;
+	color: #000
+}
+
+.g-btn-a span {
+	background-position: 100% -266px;
+	display: block;
+	_display: inline-block;
+	padding-right: 11px
+}
+
+.g-btn-a i {
+	float: left;
+	height: 32px;
+	width: 25px
+}
+
+.comment i {
+	background-position: -239px 9px
+}
+
+.download i {
+	background-position: -282px 8px
+}
+
+.slide i {
+	background-position: -282px -50px
+}
+
+.g-btn-a:hover,
+.shareList .hover {
+	height: 32px;
+	background-position: -134px -225px;
+	padding-left: 8px;
+	color: #fff
+}
+
+.g-btn-a:hover span,
+.shareList .hover span {
+	background-position: 100% -225px;
+	display: inline-block;
+	padding-right: 11px;
+	cursor: pointer
+}
+
+.comment .g-btn-a:hover i {
+	background-position: -209px 9px
+}
+
+.download .g-btn-a:hover i {
+	background-position: -282px -17px
+}
+
+.slide .g-btn-a:hover i {
+	background-position: -282px -82px
+}
+
+.ComentNum {
+	font-weight: bold;
+	font-family: tahoma;
+	color: #379be9;
+	margin-right: 4px
+}
+
+.g-btn-a:hover .ComentNum {
+	color: #fff
+}
+
+.shareList {
+	position: relative;
+	width: 95px
+}
+
+.shareList .g-btn-a i {
+	_width: 22px
+}
+
+.shareList .menu-bd {
+	background-position: 0 100%;
+	left: 0;
+	top: 30px;
+	position: absolute;
+	z-index: 200;
+	width: 95px;
+	display: none
+}
+
+.shareList li {
+	margin-left: 0
+}
+
+.shareList .menu-hd i {
+	background-position: -239px -58px
+}
+
+.shareList .menu-hd:hover i,
+.shareList .hover i {
+	background-position: -209px -58px
+}
+
+.shareList .menu-bd li {
+	height: 26px;
+	width: 92px;
+	line-height: 26px
+}
+
+.g-btn-b {
+	display: block;
+	color: #fff
+}
+
+.g-btn-b:hover {
+	background: #3591d8;
+	color: #fff
+}
+
+.g-btn-b i {
+	float: left;
+	width: 22px;
+	height: 26px
+}
+
+.share2sina i {
+	background-position: -209px -93px
+}
+
+.share2weibo i {
+	background-position: -209px -115px
+}
+
+.share2qq i {
+	background-position: -209px -141px
+}
+
+.share2qzone i {
+	background-position: -209px -169px
+}
+
+.share2sina .g-btn-b:hover i {
+	background-position: -239px -93px
+}
+
+.share2weibo .g-btn-b:hover i {
+	background-position: -239px -115px
+}
+
+.share2qq .g-btn-b:hover i {
+	background-position: -239px -141px
+}
+
+.share2qzone .g-btn-b:hover i {
+	background-position: -239px -169px
+}
+
+.shareList .g-btn-b {
+	padding-left: 10px
+}
+
+.g-btn-c {
+	display: inline-block;
+	font-size: 12px;
+	color: #fff;
+	padding: 0 15px 0 4px;
+	background-color: #44a5f0;
+	background-position: -211px -191px;
+	border: 1px solid #3797e2;
+	line-height: 16px;
+	background-position: -211px -206px;
+	margin: -30px 3px 0 0
+}
+
+.g-btn-c:hover {
+	background-position: -211px -191px
+}
+
+.download {
+	position: relative;
+}
+
+#downLoadFlash {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 90px;
+	height: 30px
+}
+
+#shareWx a {
+	color: #fff;
+	display: block;
+	width: 100%;
+	height: 100%;
+	_padding-top: 6px;
+	_height: 20px;
+	_line-height: 20px;
+}
+
+#shareWx a:hover {
+	background: #3591d8;
+	color: #fff;
+}
+
+#shareWx a i {
+	vertical-align: middle;
+	width: 18px;
+	height: 14px;
+	display: inline-block;
+	margin: 0 5px 0 10px;
+	background: url(http://mat1.gtimg.com/www/hd2013/images/hd_wx_bg.png) no-repeat 0 0;
+}
+
+#shareWx a:hover i {
+	background-position: 0 -14px;
+}
+
+#wxBox {
+	display: none;
+	width: 85px;
+	height: 85px;
+	padding: 4px;
+	background: #fff;
+	border: 1px #4785bf solid;
+	position: absolute;
+	bottom: -128px;
+	left: -94px;
+}
+
+#wxBox img {
+	width: 85px;
+	height: 85px;
+}
+
+
+/*图片区域*/
+
+.section {
+	position: relative;
+}
+
+#Main-A {
+	width: 1132px;
+	height: 400px;
+	margin: 0 auto;
+	position: relative;
+	background: url(../images/07/ajax-loader.gif) no-repeat center center;
+	padding: 9px 9px 100px;
+}
+
+#picWrap{
+	cursor: pointer;
+	position: absolute;
+	left: 320px;
+	top: 9px;
+	z-index: 6;
+}
+
+#InfoWrap {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	z-index: 6
+}
+
+#Info {
+	margin-left: -9px;
+	text-align: left;
+	padding-top: 5px
+}
+
+#infoNum {
+	position: absolute;
+	left: 0;
+	top: 15px;
+	width: 130px;
+	font-family: Georgia, tahoma;
+	font-size: 20px;
+	color: #757575;
+	text-align: center
+}
+
+#curNum {
+	font-size: 30px;
+	color: #379be9
+}
+
+#infoTxtWrap {
+	position: relative;
+	margin: 0 75px 0 130px;
+	height: 80px;
+	padding: 6px 10px 0 0;
+	overflow: hidden
+}
+
+#infoCon {
+	position: relative;
+	height: 52px;
+	overflow: hidden;
+}
+
+#infoTxt {
+	font-size: 14px;
+	line-height: 26px
+}
+
+#InfoWrap .info_bg_hastext {
+	background: rgba(245, 245, 245, 0.6);
+}
+
+#InfoWrap .info_bg_notext {
+	background: transparent;
+	filter: none;
+}
+
+#InfoWrap .info_bg_hastext #infoNum {
+	top: 15px;
+}
+
+#InfoWrap .info_bg_notext #infoNum {
+	top: 45px;
+}
+
+#InfoWrap .info_bg_hastext #infoTxtWrap #infoCon {
+	display: block;
+}
+
+#InfoWrap .info_bg_notext #infoTxtWrap #infoCon {
+	display: none;
+}
+
+.slideBtn {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 32px;
+	height: 32px;
+	background: url(../images/07/slide_1.png) no-repeat;
+}
+
+.slideBtn:hover {
+	background: url(../images/07/slide_hover_1.png) no-repeat;
+}
+
+#mouseMask {
+	width: 98%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	cursor: pointer;
+}
+#bigPic li{
+	display: none;
+}
+#bigPic li.on{
+	display: block;
+}
+#bigPic li img{
+	height: 400px;
+	background: #000
+}
+
+.btnWrap {
+	z-index: 10;
+}
+
+.btn {
+	position: absolute;
+	top: 270px;
+	visibility: hidden;
+	z-index: 9
+}
+
+.btn a {
+	display: block;
+	width: 31px;
+	height: 61px
+}
+
+.btnLeft {
+	left: 110px
+}
+
+.btnRight {
+	right: 110px
+}
+
+.btnLeft a {
+	background-position: -189px -404px
+}
+
+.btnRight a {
+	background-position: -270px -404px
+}
+
+#Main-C {
+	border: 1px solid #dddddd;
+	height: 105px;
+	position: relative;
+	background: #fff
+}
+
+.smallPic-wrap {
+	position: absolute;
+	right: 0
+}
+
+#smallPic-AD {
+	width: 238px;
+	position: absolute;
+	left: 10;
+	top: 27px;
+	height: 86px;
+	overflow: hidden
+}
+
+.smallPic {
+	overflow: hidden;
+	font-size: 12px;
+	color: #fff;
+	position: relative;
+	padding: 0 30px;
+	left: 0;
+	*zoom: 1
+}
+
+.sBtn {
+	position: absolute;
+	top: -1px;
+	width: 30px;
+	height: 107px;
+	z-index: 3
+}
+
+.sBtnLeft {
+	left: -1px;
+	background-position: -134px 0
+}
+
+.sBtnRight {
+	right: -1px;
+	background-position: -169px 0
+}
+
+.sBtnLeft:hover {
+	left: -1px;
+	background-position: -134px -112px
+}
+
+.sBtnRight:hover {
+	right: -1px;
+	background-position: -169px -112px
+}
+
+.smallPic .SmallWarp {
+	height: 99px;
+	padding: 6px 0 0 0;
+	overflow: hidden;
+	position: relative;
+	left: 0
+}
+
+.smallPic .SmallWarp a.mask {
+	position: absolute;
+	width: 130px;
+	height: 89px;
+	background: url(../images/07/sMask.png) no-repeat 0 0;
+	overflow: hidden;
+	z-index: 1;
+	left: 4px
+}
+
+.smallPic .SmallWarp ul {
+	position: absolute;
+	z-index: 2;
+	left: 0;
+}
+
+.smallPic .SmallWarp li {
+	float: left;
+	width: 130px;
+	height: 105px;
+	position: relative;
+	text-align: center;
+	margin: 0 0 0 20px
+}
+
+.smallPic .SmallWarp li .mask {
+	display: none;
+	width: 130px;
+	height: 89px;
+	position: absolute;
+	left: 0;
+	top: -9px;
+	z-index: 1;
+	background: url(../images/07/sMask.png) no-repeat 0 0
+}
+.smallPic .SmallWarp li .on{
+	display: block;
+}
+.smallPic .SmallWarp li div {
+	width: 130px;
+	height: 80px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	overflow: hidden;
+	margin-top: 9px
+}
+
+.smallPic .SmallWarp li div a {
+	display: block;
+	width: 120px;
+	text-align: center;
+	height: 75px;
+	margin: 0 auto;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative
+}
+
+.smallPic .SmallWarp li div a img {
+	height: 75px
+}
+
+.smallPic .SmallWarp li a:hover {
+	text-decoration: none
+}
+
+.smallPic .SmallWarp li a span {
+	display: none
+}
+
+.scrollLine {
+	width: 920px;
+	margin: 17px auto 0 auto;
+	height: 1px;
+	line-height: 1px;
+	background: url(../images/07/scrollline.png) no-repeat;
+	overflow: visible;
+	position: relative;
+	clear: both;
+}

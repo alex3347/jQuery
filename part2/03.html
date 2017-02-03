@@ -1,0 +1,54 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery相册效果</title>
+		<script src="js/jquery-1.11.3.min.js"></script>
+	</head>
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		ul li{list-style:none;}
+		.showArea{position:relative;margin:10px auto;width:550px;height:435px;border:1px solid #ccc;}
+		.showArea .waitArea{position:absolute;padding:3px;width:72px;height:105px;cursor:pointer;}
+		.showArea .zIndex{z-index:2;}
+		.showArea .clicked{background-color:#f50;}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			var imgs = ["images/1.jpg","images/2.jpg","images/3.jpg","images/4.jpg","images/5.jpg","images/6.jpg","images/7.jpg","images/8.jpg","images/9.jpg"];
+			var showArea = $(".showArea").eq(0);
+			var len = imgs.length;
+			var cloneImg = [],//用于存储复制后的img jquery对象
+				basicImg = [],//用于储存基本图片img的数组
+				n = 0;
+			for(var i = 0; i < len; i++){
+				var img = new Image();
+				img.className = "waitArea";
+				img.style.left = ((i % 3) * 80 + 10) + "px";
+				img.style.top = (Math.floor(i / 3) * 113 + 10) + "px";
+				img.src = imgs[i];
+				basicImg.push(img);
+				var cImg = $(img).clone();//将img转化为jquery对象后进行复制
+				showArea.append(img).append(cImg);//将img及复制后的img jquery对象追加进div
+				cloneImg.push(cImg);
+			}
+			$(basicImg[n]).addClass("clicked");
+			$(cloneImg[n]).addClass("zIndex").animate({"left":"254px","top":"5px","width":"286px","height":"420px"},100);
+			$(cloneImg).each(function(i){
+				$(this).click(function(){
+					if($(this).hasClass("zIndex")){return;}
+					$(basicImg[n]).removeClass("clicked");
+					$(basicImg[i]).addClass("clicked");
+					$(cloneImg[n]).animate({"left":$(basicImg[n]).position().left,"top":$(basicImg[n]).position().top,"width":$(basicImg[n]).width(),"height":$(basicImg[n]).height()},600,function(){
+						$(this).removeClass("zIndex");
+					});
+					$(cloneImg[i]).addClass("zIndex").animate({"left":"254px","top":"5px","width":"286px","height":"420px"},600);
+					n = i;
+				});
+			});
+		});
+	</script>
+	<body>
+		<div class="showArea"></div>
+	</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+	<head>
+		<meta charset="UTF-8">
+		<title>旋转轮播</title>
+		<script src="http://cdn.bootcss.com/jquery/1.5.1/jquery.min.js"></script>
+		<script src="js/jquery.transform-0.9.3.min_.js"></script>
+	</head>
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		.mainbox{width:1100px;height:420px;padding-left:60px;margin:0 auto;}
+		.mainbox ul li{float:left;list-style:none;width:286px;height:420px;overflow:hidden;border: 1px solid #FFF;margin-left: -60px;position: relative;}
+		.mainbox ul #liFirst{margin-left: 0;}
+		.mainbox ul li img{position: absolute;}
+		.mainbox .btnBox a{position: absolute;}
+		.mainbox .btnBox .btnLeft{top:50%;left:50px;color: black;font-size: 60px;}
+		.mainbox .btnBox .btnRight{top:50%;right:50px;color: black;font-size: 60px;}
+		
+	</style>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		//自执行函数，用变量loopPlayerInit接取返回值，返回值是内部初始化函数的指针
+		var loopPlayerInit=(function(){
+			var $btnLeft=null,
+				$btnRight=null,
+				$btnPlay=null,
+				$imgList=null,
+				origin=["125px","600px"],//指定旋转的基点位置
+				imgOrigin=["125px","800px"],
+				imgAll=createImg([["images/1.jpg","images/2.jpg","images/3.jpg","images/4.jpg"],["images/5.jpg","images/6.jpg","images/7.jpg","images/8.jpg"],["images/9.jpg","images/10.jpg","images/11.jpg","images/12.jpg"]]),
+				imgArrIndex=0,//记录索引
+				imgAng=45,
+				imgTime=300,
+				rotating=false;
+			function init(){
+				$btnLeft=$(".btnLeft"),
+				$btnRight=$(".btnRight"),
+				$imgList=$(".mainbox ul li");
+				
+				configer();
+				setEvent();
+			}
+			function configer(){
+				var ang=6,
+					aInt=-6;//设置初始角度
+				$imgList.transform({origin:origin})
+				$imgList.each(function(i){//i为遍历的元素索引
+					var $this=$(this);
+					$this.transform({rotate:aInt+(i*ang)+"deg"});
+				})
+			}
+			
+			function setEvent(){
+				$btnLeft.bind("click",function(){
+					anigo(-1);
+					return false;//保证a标签点击后href无跳转，用on绑定此句无效
+				})
+				$btnRight.bind("click",function(){
+					anigo(1);
+					return false;
+				})
+				$btnPlay.bind("click",function(){
+					return false;
+				})
+			}
+			
+			function createImg(arr){
+				var imgArr=[];
+				for(var i in arr){
+					imgArr[i]=[];
+					for(var x in arr[i]){
+						imgArr[i][x]=new Image();//变为图片对象
+						imgArr[i][x].src=arr[i][x];
+					}
+				}//for in专门用于遍历数组及对象
+				return imgArr;
+			}
+			//旋转函数
+			function anigo(d){
+				if(rotating)return false;
+				rotating=true;
+				
+				imgArrIndex+=d;
+				if(imgArrIndex>imgAll.length-1){
+					imgArrIndex=0;
+				}else if(imgArrIndex<0){
+					imgArrIndex=imgAll.length-1;
+				}
+				$imgList.each(function(i){
+					var $thisItem=$(this);//li
+					var $thisImg=$thisItem.children("img");//li img
+					var $targetImg=$(imgAll[imgArrIndex][i]);//将数组中图片封装为jQuery对象
+					var thisTime=(d===1)?imgTime*i:imgTime*($imgList.length-1-i);
+					$thisItem.append($targetImg);//li增加img
+					$thisImg.transform({origin:imgOrigin});
+					$targetImg.transform({origin:imgOrigin,rotate:(0-d)*imgAng+"deg"});
+					setTimeout(function(){
+						$thisImg.animate({rotate:imgAng*d+"deg"});
+						$targetImg.animate({rotate:"0deg"},500,function(){
+							$thisImg.remove();
+							if(thisTime==(($imgList.length-1)*imgTime)){
+								rotating=false;//防止多次点击
+							}
+						});
+					},thisTime);
+				})
+			}
+			
+			return init;
+		})();
+		loopPlayerInit();//实际上是init在执行，此处有闭包
+	});
+	</script>
+	<body>
+		<div class="mainbox">
+			<ul>
+				<li id="liFirst"><img src="images/1.jpg"/></li>
+				<li><img src="images/2.jpg"/></li>
+				<li><img src="images/3.jpg"/></li>
+				<li><img src="images/4.jpg"/></li>
+			</ul>
+			<div class="btnBox">
+				<a class="btnLeft">&lt;</a>
+				<a class="btnRight">&gt;</a>
+			</div>
+		</div>
+	</body>
+</html>
