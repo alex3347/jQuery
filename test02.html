@@ -6,18 +6,49 @@
 		<title>应用程序缓存</title>
 	</head>
 	<style>
-		*{
-			padding:0;
-			margin:0;
+		* {
+			padding: 0;
+			margin: 0;
 		}
 	</style>
 	<script type="text/javascript">
-		function clone(object){
-			function F(){}
-			object.prototype=F;
-			return new F;
+		function add(a,b){
+			var arrayA=a.split("."),
+				arrayB=b.split("."),
+				indexA=a.indexOf("."),
+				indexB=b.indexOf("."),
+				trimA=[],
+				trimB=[];
+				trimA[0]=a.substring(0,15);
+				trimA[1]=a.substring(16);
+				trimB[0]=b.substring(0,15);
+				trimB[1]=a.substring(16);
+				lenA=a.length,
+				lenB=b.length;
+				console.log(trimA);
+				console.log(parseFloat(trimA[0])+parseFloat(trimB[0]));
+				console.log(parseFloat(trimA[1])+parseFloat(trimB[1]));
+			var	MAX=Math.max(lenA,lenB),
+				diff=Math.abs((lenA-(indexA+1))-(lenB-(indexB+1)));
+				 那在JS中，如何实现add('0.1' + '0.2') === '0.3'与add('0.099999999999999999' + '0.2') === '0.299999999999999999'呢？
+			if(lenA1<lenB1){
+				for (var i=0;i<diff-15;i++) {
+					trimA[1]+="0";
+				}
+			}else{
+				for (var i=0;i<diff-15;i++) {
+					trimB[1]+="0";
+				}
+			}
+			var temp=parseFloat(arrayA[1])+parseFloat(arrayB[1]);
+			console.log(temp);
 		}
+		var x = add("0.099999999999999999", "0.2");
+		var y=299999999999999999/1000000000000000000;
+		console.log(x);
+		console.log(y);
 	</script>
+
 	<body>
 		<div style="font-size: 12px;width: 20em;">
 			<span style="padding: 20px;font-size: 1.5em;line-height: 1.7em;">www.yinyuetai.com</span>
